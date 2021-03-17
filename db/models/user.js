@@ -34,11 +34,11 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
 
-    static encrypt = (password) => {
+    static encrypt(password) {
       return bcrypt.hashSync(password, 10)
     }
 
-    static register = ({username, email, password}, uuid, models) => {
+    static register({username, email, password}, uuid, models) {
       const encryptedPassword = this.encrypt(password+'')
       return this.create({
         id: uuid,
@@ -61,9 +61,11 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
 
-    checkPassword = (password) => bcrypt.compareSync(password, this.password);
+    checkPassword(password) {
+      return bcrypt.compareSync(password, this.password);
+    }
 
-    static authenticate = async ({ username, password }) => {
+    static async authenticate({ username, password }) {
       try {
         const user = await this.findOne({ where: { username }})
         if (!user) {
@@ -79,7 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
 
-    generateToken = () => {
+    generateToken() {
       const payLoad = {
         id: this.id,
         username: this.username
