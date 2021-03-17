@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../head.ejs') %>
+    <%- include('./head.ejs') %>
     <title>Update Player</title>
   </head>
   <body>
+    <div class="jumbotron jumbotron-fluid jumbotronBg">
+      <div class="container"></div>
+    </div>
     <div class="container mt-5">
       <h3>Update Player</h3>
-      <a href="/dashboard/users/<%= user.id %>">Back to Player Detail</a>
+      <a href="/dashboard/users/<%= user.id %>"> << Back to Player Detail</a>
       <div class="row">
         <div class="col-7">
           <p>Edit on the form field to update.</p>

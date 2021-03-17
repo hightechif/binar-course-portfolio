@@ -1,8 +1,8 @@
-## Code Challenge Chapter 6 | CRUD Dashboard | Binar Academy
+## Code Challenge | Binar Academy
 
 ### Description
 
-This is a landing page with paper rock scissors game and CRUD Dashboard using NodeJS, Express, PostgreSQL and Sequelize. This repository created to complete the Code Challenge of Chapter 6 from Binar Academy. There are 4 tables on the database after installation: `user_game`, `user_game_biodata`, `user_game_history`, `SequelizeMeta` (stores postgres setting).
+This is a landing page with paper rock scissors game and CRUD Dashboard using NodeJS, Express, PostgreSQL and Sequelize. This app also provide RESTful API with JWT Authentication. This repository created to complete the Code Challenge of Chapter 7 from Binar Academy. There are 4 tables on the database after installation: `user_game`, `user_game_biodata`, `user_game_history`, `SequelizeMeta` (stores postgres setting).
 
 ![Admin Login](https://github.com/ridhanf/FSW5-RFadhil-06-Challenge/blob/feature/dashboard/preview/admin-login.png?raw=true)
 ![Admin Dashboard](https://github.com/ridhanf/FSW5-RFadhil-06-Challenge/blob/feature/dashboard/preview/admin-dashboard.png?raw=true)
@@ -16,9 +16,14 @@ Landing Page Mobile        |  Game Mobile
 Routes:
 
 ```
+LANDING PAGE
 GET    /                              """Landing Page"""
-GET    /game                          """Game"""
-GET    /dashbarod                     """Admin Login"""
+
+GAME
+GET    /game                          """Game Page"""
+
+DASHBOARD
+GET    /dashboard                     """Admin Login"""
 POST   /login                         """Simple login authentication"""
 GET    /dashboard/users               """Admin Dashboard"""
 GET    /dashboard/create              """Create Player Form"""
@@ -27,6 +32,18 @@ GET    /dashboard/users/:id           """Player Detail Info"""
 GET    /dashboard/users/update/:id    """Update player Form"""
 PUT    /dashboard/users/update/:id    """Update User Info"""
 DELETE /dashboard/users/:id           """Delete User"""
+
+RESTful API
+GET    /docs                          """API Documentation""
+POST   /api/v1/register               """Register User"""
+POST   /api/v1/login                  """User Login"""
+GET    /api/v1/whoami                 """Show Current User"""
+POST   /api/v1/create-room            """Create a Game Room"""
+GET    /api/v1/players                """Get All Players"""
+POST   /api/v1/players/create         """Create New Player"""
+GET    /api/v1/players/:id            """Get Player by ID"""
+PUT    /api/v1/players/update/:id     """Update Player by ID"""
+DELETE /api/v1/players/delete/:id     """Delete Player by ID"""
 ```
 
 
@@ -35,8 +52,8 @@ DELETE /dashboard/users/:id           """Delete User"""
 **1. Clone the source code**
 
 ```
-$ git clone https://github.com/ridhanf/FSW5-RFadhil-06-Challenge.git
-$ cd FSW5-RFadhil-06-Challenge
+$ git clone git@github.com:ridhanf/FSW5-RFadhil-07-Challenge.git
+$ cd FSW5-RFadhil-07-Challenge
 ```
 
 **2. Install Dependencies**

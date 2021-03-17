@@ -1,29 +1,22 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('user_game', {
-      id: {
+    await queryInterface.createTable('game_room', {
+      room_id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID
       },
-      username: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING,
         unique: true
       },
-      email: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        unique: true
+      player1_id: {
+        type: Sequelize.UUID
       },
-      password: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      isAdmin: {
-        allowNull: false,
-        type : Sequelize.BOOLEAN
+      player2_id: {
+        type: Sequelize.UUID
       },
       createdAt: {
         allowNull: false,
@@ -36,6 +29,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('user_game');
+    await queryInterface.dropTable('game_room');
   }
 };

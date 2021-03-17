@@ -64,15 +64,15 @@ class Game {
         }
         signIdxBefore = this.player2.signIdx;
         timesRun += 1;
-        if (timesRun == 25) {
+        if (timesRun == 2 ) {
           clearInterval(intervalGenerator);
           this.player2.signs[this.player2.signIdx].style.backgroundColor = "gray";  // Sign yg pada akhirnya dipilih oleh Player.
           timesRun = 0;
         }
-      }, 50);
+      }, 2);
       setTimeout(() => {
         this.whoWin(this.player1.signIdx, this.player2.signIdx);
-      }, 1250)
+      }, 200)
     }
   }
 
@@ -140,4 +140,5 @@ const playerCard = (card) => {
     }
   }
   pickStatus = true;
+  game1.startGame();
 }

@@ -6,6 +6,27 @@ module.exports = {
     await queryInterface.bulkInsert('user_game_history', [
       {
         log_id: uuidv4(),
+        user_id: 'd649bb89-0e21-4fdc-ad4e-e19f78c59f07',
+        winStatus: 'win',
+        score: 300,
+        last_login: new Date()
+      },
+      {
+        log_id: uuidv4(),
+        user_id: 'e7516524-7b5c-11eb-9439-0242ac130002',
+        winStatus: 'win',
+        score: 300,
+        last_login: new Date()
+      },
+      {
+        log_id: uuidv4(),
+        user_id: 'e7516524-7b5c-11eb-9439-0242ac130002',
+        winStatus: 'win',
+        score: 500,
+        last_login: new Date()
+      },
+      {
+        log_id: uuidv4(),
         user_id: '06896bd4-8cbc-48c6-8c46-9364a6d939c4',
         winStatus: 'draw',
         score: 250,
